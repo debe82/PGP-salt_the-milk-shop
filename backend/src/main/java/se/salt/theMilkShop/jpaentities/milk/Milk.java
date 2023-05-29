@@ -1,14 +1,19 @@
 package se.salt.theMilkShop.jpaentities.milk;
 
 import jakarta.persistence.*;
+//import org.springframework.data.mongodb.core.mapping.Document;
+//import org.springframework.data.mongodb.core.mapping.FieldType;
+//import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import java.util.UUID;
 
+//@Document
 @Entity
 public class Milk {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    //@MongoId(value = FieldType.OBJECT_ID)
     private UUID id;
 
     private String name;

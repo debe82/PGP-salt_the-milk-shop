@@ -3,6 +3,11 @@ spring-doc:
   path: /swagger-ui.html
 
 spring:
+  #  data:
+  #    mongodb:
+  #      uri: mongodb://${MONGO_USERNAME}:${MONGO_PWD}@${URL}/reviews # connection string
+  #
+  #
   output:
     ansi:
       enabled: always
@@ -11,7 +16,6 @@ spring:
       mode: always
       platform: h2
   datasource:
-
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:milk
     username: sa

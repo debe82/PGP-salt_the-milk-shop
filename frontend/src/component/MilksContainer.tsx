@@ -3,8 +3,10 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react';
 import { getMilks } from '../api/dataManagement';
+import { IMilk } from '../helper/models';
+import Milk from './Milk';
 
-export default function App() {
+export default function MilksContainer() {
   
   
   const [allMilks, setAllMilks] = useState([]);
@@ -23,6 +25,12 @@ export default function App() {
   }, []);
 
   return (
-      <></>
+      <>
+        {allMilks.map((m: IMilk, index: number) => {
+          return <Milk milk={m} key={index}/>
+        })
+
+        }
+      </>
   )
 }
