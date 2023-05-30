@@ -12,18 +12,12 @@ import { type } from 'os';
 type MilkTypesProps = {
   types: string[]; //to change in array
   name: string;
+  allMilks: IMilk[];
 };
 
-export default function MilksContainer({types, name}: MilkTypesProps) {
+export default function MilksContainer({types, name, allMilks}: MilkTypesProps) {
   
-  const [allMilks, setAllMilks] = useState([]);
   const [listOfTypes, setListOfTypes] = useState<string[]>([]);
-
-  const fetchData = async () => {
-    console.log("fetchData");
-    const fetchedMilks = await getMilks().then(m => {return m});
-    setAllMilks(fetchedMilks);
-  } 
 
   const updateTypes = () => {
     setListOfTypes(types)
@@ -31,12 +25,11 @@ export default function MilksContainer({types, name}: MilkTypesProps) {
 
   useEffect(() => {
     //fillDb();
-    fetchData();
     updateTypes()
   }, [listOfTypes]);
 
   return (
-      <>
+      <section className='section__container--milk'>
         {
           allMilks.filter((milk: IMilk) => {
             if (types.length > 0) {
@@ -54,6 +47,6 @@ export default function MilksContainer({types, name}: MilkTypesProps) {
             return <Milk milk={fMilk} key={index}/>
           })
         }
-      </>
+      </section>
   )
 }

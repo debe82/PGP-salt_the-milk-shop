@@ -23,6 +23,18 @@
   justify-content: space-between;
 }
 
+.section__selector--search {
+  width: 200px
+}
+
+.section__container--milk {
+  display: grid;
+}
+
+
+.section--milk {
+  border: 1px solid black;
+}
 
 /* :root {
   --max-width: 1100px;

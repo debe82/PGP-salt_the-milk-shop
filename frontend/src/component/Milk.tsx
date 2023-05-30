@@ -13,11 +13,15 @@ export default function Home({milk}: IMilktProps) {
 
 return(
   <>
-    <section>
-      <div>id: {milk.id}</div>
-      <div>name: {milk.name}</div>
-      <div>type: {milk.type}</div>
-      <div>storage: {milk.storage}</div>
+    <section className="section--milk">
+      <section>
+        <img src="../assets/milk.png"></img>
+      </section>
+      <section>
+        <div>name: {milk.name}</div>
+        <div>type: {milk.type}</div>
+        <div>storage: {milk.storage}</div>
+      </section>
     </section>
   </>
 

@@ -9,16 +9,15 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
 import { milkTypeList } from '@/helper/models';
 
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
 const MenuProps = {
   PaperProps: {
     style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250,
+      maxHeight: 200,
     },
   },
 };
+
+
 
 type CustomSelectProps = {
   setMilkTypes?: (newType: string[]) => void;
@@ -37,9 +36,15 @@ export default function CustomSelect({setMilkTypes}: CustomSelectProps) {
   setMilkTypes?.(types);
 
   return (
-    <div>
-      <FormControl sx={{ m: 1, width: 300 }}>
-        <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>
+    <section className='customSelect'>
+      <FormControl className='customSelect__FormControl' sx={{ m: 0, width: {
+        xs: 80,
+        sm: 200,
+        md: 300,
+        lg: 400,
+        }}}
+        >
+        <InputLabel id="demo-multiple-checkbox-label">Milk Type</InputLabel>
         <Select
           labelId="demo-multiple-checkbox-label"
           id="demo-multiple-checkbox"
@@ -58,6 +63,6 @@ export default function CustomSelect({setMilkTypes}: CustomSelectProps) {
           ))}
         </Select>
       </FormControl>
-    </div>
+    </section>
   );
 }
