@@ -36,11 +36,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <header className="home-header">
+        THE MILK STORE
+      </header>
       <main className="home-main">
-        <header className="home-header">
-          THE MILK STORE
-        </header>
-
         <SearchFilter 
           setNameChange={setMilkName} 
           setMilkTypes={setMilkTypes}

@@ -1,13 +1,5 @@
-.home-main {
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #ffebeb;
-}
 
 .home-header {
-
   background-color: #ffffff;
   min-height: 5vh;
   justify-content: center;
@@ -16,6 +8,13 @@
   color: #ffabab;
 }
 
+.home-main {
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffebeb;
+  margin: 0px 20px;
+}
 
 .section__selector {
   display: flex;
@@ -34,6 +33,27 @@
 
 .section--milk {
   border: 1px solid black;
+  margin: 10px
+}
+
+.section--milk__img {
+  background-color: #eeeeee;
+  align-content: center;
+}
+
+.section--milk__img--milk {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit:cover;
+}
+
+.section--milk--info {
+  background-color: #ffffff;
+  margin: 0px;
+}
+
+.h--milk--info {
+  margin: 0px
 }
 
 /* :root {
