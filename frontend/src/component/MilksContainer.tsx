@@ -37,7 +37,11 @@ export default function MilksContainer({types, name}: MilkTypesProps) {
           allMilks.filter((milk: IMilk) => {
             if (types.length > 0) {
               return types.some((type: string) => {
-                return milk.type.toLowerCase().includes(type.toLowerCase());
+                if (type === "All") {
+                  return milk.type;
+                } else {
+                  return milk.type.toLowerCase().includes(type.toLowerCase());
+                }  
               })
             } else {
               return milk;

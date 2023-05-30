@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
 
   const [milkName, setMilkName] = useState("");
-  const [milkTypes, setMilkTypes] = useState<string[]>([]);
+  const [milkTypes, setMilkTypes] = useState<string[]>(["All"]);
 
   return (
     <>

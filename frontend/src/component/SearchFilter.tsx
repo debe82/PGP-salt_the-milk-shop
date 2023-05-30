@@ -1,3 +1,4 @@
+import { milkTypeList } from "@/helper/models";
 
 
 type MilkNameProps = {
@@ -10,7 +11,6 @@ export default function SearchFilter({setMilkTypes, setNameChange}: MilkNameProp
   const setType = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const typeArr: string[] = []; 
     typeArr.push(e.target.value);
-    console.log("typeArr:", typeArr);
     setMilkTypes?.(typeArr);
   }
 
@@ -18,10 +18,10 @@ export default function SearchFilter({setMilkTypes, setNameChange}: MilkNameProp
     <>
       <section className="section__selector">
         <input type="search" placeholder="Search..." onChange={(e) => setNameChange?.(e.target.value)}/>
-        <select  onChange={(e)=> setType(e)}>
-            <option value="Pea">Pea</option>
-            <option value="Rice">Rice</option>
-            <option value="Coconut">Coconut</option>
+        <select  onChange={(e)=> setType(e)} defaultValue={"All"}>
+           {milkTypeList.map((type: string, index: number ) => 
+            <option value={type} key={index}>{type}</option>
+           )}
         </select>
       </section>
     </>

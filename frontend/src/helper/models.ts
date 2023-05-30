@@ -22,6 +22,13 @@ export interface IFileContent {
   results: IMilk[];
 }
 
+export const milkTypeList = [
+    "All", "Cashew", "Pea", 
+    "Rice", "Coconut", "Soy", 
+    "Hemp", "Almond", "Oat", 
+    "Macadamia", "Whole", "Walnut"
+  ]
+
 export const FileContent = {
     "count": 99,
     "results": [
