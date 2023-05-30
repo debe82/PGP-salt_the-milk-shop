@@ -6,19 +6,19 @@ import { getMilks } from '../api/dataManagement';
 import { IMilk } from '../helper/models';
 import Milk from './Milk';
 import { fillDb } from '@/helper/methods';
+import { type } from 'os';
 
 
 type MilkTypesProps = {
-  //types: string; //to change in array
+  types: string[]; //to change in array
   name: string;
 };
 
-export default function MilksContainer({name}: MilkTypesProps) {
-  
+export default function MilksContainer({types, name}: MilkTypesProps) {
   
   const [allMilks, setAllMilks] = useState([]);
 
-
+  console.log("types: ", types);
   const fetchData = async () => {
     console.log("fetchData");
     const fetchedMilks = await getMilks().then(m => {return m});
@@ -33,16 +33,18 @@ export default function MilksContainer({name}: MilkTypesProps) {
 
   return (
       <>
-        {allMilks.filter((milk: IMilk) => milk.name.toLowerCase().includes(name)).map((fMilk: IMilk, index: number) => {
-          return <Milk milk={fMilk} key={index}/>
-        })
-
-        }
-
-        {//allMilks.map((m: IMilk, index: number) => {
-          //return <Milk milk={m} key={index}/>
-        //})
-
+        {
+          allMilks.filter((milk: IMilk) => {
+            if (types.length > 0) {
+              return types.some((type: string) => {
+                return milk.type.toLowerCase().includes(type.toLowerCase());
+              })
+            } else {
+              return milk;
+            }
+          }).filter((m: IMilk) => m.name.toLowerCase().includes(name.toLowerCase())).map((fMilk: IMilk, index: number) => {
+            return <Milk milk={fMilk} key={index}/>
+          })
         }
       </>
   )

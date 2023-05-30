@@ -12,10 +12,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
-  const [milkName, setMilkName] = useState("")
-
-
-  console.log("name:", name);
+  const [milkName, setMilkName] = useState("");
+  const [milkTypes, setMilkTypes] = useState<string[]>([]);
 
   return (
     <>
@@ -30,8 +28,9 @@ export default function Home() {
         </header>
         <SearchFilter 
           setNameChange={setMilkName} 
+          setMilkTypes={setMilkTypes}
         />
-        <MilksContainer name={milkName} />
+        <MilksContainer types={milkTypes} name={milkName} />
         
       </main>
     </>

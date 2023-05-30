@@ -1,19 +1,27 @@
 
 
 type MilkNameProps = {
-  setNameChange?: (newName: string) => void;
+  setMilkTypes?: (newType: string[]) => void;
+  setNameChange?: (newType: string) => void;
 } 
 
-export default function SearchFilter({setNameChange}: MilkNameProps) {
+export default function SearchFilter({setMilkTypes, setNameChange}: MilkNameProps) {
+
+  const setType = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const typeArr: string[] = []; 
+    typeArr.push(e.target.value);
+    console.log("typeArr:", typeArr);
+    setMilkTypes?.(typeArr);
+  }
 
   return(
     <>
       <section className="section__selector">
         <input type="search" placeholder="Search..." onChange={(e) => setNameChange?.(e.target.value)}/>
-        <select>
-            <option value="js">type1</option>
-            <option value="html">type2</option>
-            <option value="css">type3</option>
+        <select  onChange={(e)=> setType(e)}>
+            <option value="Pea">Pea</option>
+            <option value="Rice">Rice</option>
+            <option value="Coconut">Coconut</option>
         </select>
       </section>
     </>
