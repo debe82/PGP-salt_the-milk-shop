@@ -10,7 +10,6 @@ interface IMilktProps  {
 
 export default function Home({milk}: IMilktProps) {
 
-  console.log("milk info: ", milk.id, ", ", milk.name, ", ", milk.type, ", ", milk.storage)
 
 return(
   <>

@@ -15,7 +15,7 @@ export async function getMilk(id: string) {
  return data;
 }
 
-export async function addPuppy(milk: IMilkDto) {
+export async function addMilk(milk: IMilkDto) {
   const response = await fetch(BASE_URL, {
     method: "POST",
     body: JSON.stringify(milk),
@@ -23,6 +23,6 @@ export async function addPuppy(milk: IMilkDto) {
       "content-type": "application/json",
     },
   });
-  const json = (await response.json()) as { addedPuppy: IMilk };
+  const json = (await response.json()) as { addedMilk: IMilk };
   return json;
 };

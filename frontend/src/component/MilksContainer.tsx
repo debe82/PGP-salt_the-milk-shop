@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { getMilks } from '../api/dataManagement';
 import { IMilk } from '../helper/models';
 import Milk from './Milk';
+import { fillDb } from '@/helper/methods';
 
 export default function MilksContainer() {
   
@@ -13,14 +14,14 @@ export default function MilksContainer() {
 
 
   const fetchData = async () => {
+    console.log("fetchData");
     const fetchedMilks = await getMilks().then(m => {return m});
     setAllMilks(fetchedMilks);
     
   } 
-  
-  console.log("all milks: ", allMilks);
 
   useEffect(() => {
+    //fillDb();
     fetchData();
   }, []);
 
