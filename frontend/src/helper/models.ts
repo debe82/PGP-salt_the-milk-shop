@@ -23,7 +23,7 @@ export interface IFileContent {
 }
 
 export const milkTypeList = [
-    "All", "Cashew", "Pea", 
+    "Cashew", "Pea", 
     "Rice", "Coconut", "Soy", 
     "Hemp", "Almond", "Oat", 
     "Macadamia", "Whole", "Walnut"

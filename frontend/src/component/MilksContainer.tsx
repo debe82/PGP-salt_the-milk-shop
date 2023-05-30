@@ -17,19 +17,23 @@ type MilkTypesProps = {
 export default function MilksContainer({types, name}: MilkTypesProps) {
   
   const [allMilks, setAllMilks] = useState([]);
+  const [listOfTypes, setListOfTypes] = useState<string[]>([]);
 
-  console.log("types: ", types);
   const fetchData = async () => {
     console.log("fetchData");
     const fetchedMilks = await getMilks().then(m => {return m});
     setAllMilks(fetchedMilks);
-    
   } 
+
+  const updateTypes = () => {
+    setListOfTypes(types)
+  }
 
   useEffect(() => {
     //fillDb();
     fetchData();
-  }, []);
+    updateTypes()
+  }, [listOfTypes]);
 
   return (
       <>

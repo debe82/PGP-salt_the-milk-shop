@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import MilksContainer from '@/component/MilksContainer'
 import SearchFilter from '@/component/SearchFilter'
-import {useState } from 'react'
+import {useEffect, useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,6 +14,9 @@ export default function Home() {
 
   const [milkName, setMilkName] = useState("");
   const [milkTypes, setMilkTypes] = useState<string[]>(["All"]);
+
+  useEffect(() => {
+  }, [milkTypes])
 
   return (
     <>
