@@ -7,7 +7,13 @@ import { IMilk } from '../helper/models';
 import Milk from './Milk';
 import { fillDb } from '@/helper/methods';
 
-export default function MilksContainer() {
+
+type MilkTypesProps = {
+  //types: string; //to change in array
+  name: string;
+};
+
+export default function MilksContainer({name}: MilkTypesProps) {
   
   
   const [allMilks, setAllMilks] = useState([]);
@@ -27,9 +33,15 @@ export default function MilksContainer() {
 
   return (
       <>
-        {allMilks.map((m: IMilk, index: number) => {
-          return <Milk milk={m} key={index}/>
+        {allMilks.filter((milk: IMilk) => milk.name.includes(name)).map((fMilk: IMilk, index: number) => {
+          return <Milk milk={fMilk} key={index}/>
         })
+
+        }
+
+        {//allMilks.map((m: IMilk, index: number) => {
+          //return <Milk milk={m} key={index}/>
+        //})
 
         }
       </>
