@@ -14,10 +14,10 @@ export default function Home({milk}: IMilktProps) {
 return(
   <>
     <section>
-      <div>{milk.id}</div>
-      <div>{milk.name}</div>
-      <div>{milk.type}</div>
-      <div>{milk.storage}</div>
+      <div>id: {milk.id}</div>
+      <div>name: {milk.name}</div>
+      <div>type: {milk.type}</div>
+      <div>storage: {milk.storage}</div>
     </section>
   </>
 

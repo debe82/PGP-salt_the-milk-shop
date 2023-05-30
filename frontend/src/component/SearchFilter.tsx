@@ -1,7 +1,7 @@
 
 
 type MilkNameProps = {
-  setNameChange?: (newType: string) => void;
+  setNameChange?: (newName: string) => void;
 } 
 
 export default function SearchFilter({setNameChange}: MilkNameProps) {

@@ -33,7 +33,7 @@ export default function MilksContainer({name}: MilkTypesProps) {
 
   return (
       <>
-        {allMilks.filter((milk: IMilk) => milk.name.includes(name)).map((fMilk: IMilk, index: number) => {
+        {allMilks.filter((milk: IMilk) => milk.name.toLowerCase().includes(name)).map((fMilk: IMilk, index: number) => {
           return <Milk milk={fMilk} key={index}/>
         })
 
