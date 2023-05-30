@@ -15,7 +15,7 @@ return(
   <>
     <section className="section--milk">
       <section>
-        <img src="../assets/milk.png"></img>
+        <img src="milk.png"></img>
       </section>
       <section>
         <div>name: {milk.name}</div>
