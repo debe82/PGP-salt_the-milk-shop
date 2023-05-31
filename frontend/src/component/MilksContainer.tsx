@@ -1,10 +1,10 @@
 "use client"
 
-import Image from 'next/image'
 import { useEffect, useState } from 'react';
 import { IMilk } from '../helper/models';
 import Milk from './Milk';
 import { getMilks } from '@/api/dataManagement';
+import { fillDb } from '@/helper/methods';
 
 
 type MilkTypesProps = {
@@ -20,7 +20,7 @@ export default function MilksContainer({types, name}: MilkTypesProps) {
 
   const fetchData = async () => {
     console.log("fetchData");
-    const fetchedMilks: IMilk[] = await getMilks().then(m => {return m});
+    const fetchedMilks: IMilk[] = await getMilks();
     setAllMilks(fetchedMilks);
   }
 

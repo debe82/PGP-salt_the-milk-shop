@@ -30,4 +30,8 @@ public class MilkRepository {
     public Milk getMilk(UUID id) {
         return jpaRepo.findById(id).orElse(null);
     }
+
+  public Milk updateMilk(Milk milkToUpdate) {
+        return jpaRepo.save(milkToUpdate);
+  }
 }

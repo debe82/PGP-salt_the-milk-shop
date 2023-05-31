@@ -43,7 +43,15 @@ public class MilkService {
         return milkRepo.getMilk(id);
     }
 
+    public Milk updateMilk(UUID id, MilkDTO milkDTO) {
+        Milk milkToUpdate = getMilkById(id);
+        if (milkToUpdate == null) return null;
 
+        int storage = milkToUpdate.getStorage();
+        int orderQty = milkDTO.storage();
+        milkToUpdate.setStorage(storage-orderQty);
+        return milkRepo.updateMilk(milkToUpdate);
+    }
 
 
 
@@ -64,4 +72,5 @@ public class MilkService {
         //List<Milk> allMilks = milkService.getAllMilks(); //.saveAllMilks(milks)
         return null;
     }
+
 }
