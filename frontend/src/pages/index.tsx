@@ -6,6 +6,7 @@ import SearchFilter from '@/component/SearchFilter'
 import {useEffect, useState } from 'react'
 import { IMilk } from '@/helper/models'
 import { getMilks } from '@/api/dataManagement'
+import { fillDb } from '@/helper/methods'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,17 +17,10 @@ export default function Home() {
 
   const [milkName, setMilkName] = useState("");
   const [milkTypes, setMilkTypes] = useState<string[]>(["All"]);
-  const [allProducts, setAllProducts] = useState<IMilk[]>([]);
-
-  const fetchData = async () => {
-    console.log("fetchData");
-    const fetchedMilks: IMilk[] = await getMilks().then(m => {return m});
-    setAllProducts(fetchedMilks);
-  }
 
 
   useEffect(() => {
-    fetchData();
+
   }, [milkTypes])
 
   return (
@@ -44,8 +38,8 @@ export default function Home() {
           setNameChange={setMilkName} 
           setMilkTypes={setMilkTypes}
         />
-        <section>{allProducts.length}</section>
-        <MilksContainer types={milkTypes} name={milkName} allMilks={allProducts}/>
+
+        <MilksContainer types={milkTypes} name={milkName}/>
         
       </main>
     </>

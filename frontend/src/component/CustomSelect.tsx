@@ -13,12 +13,9 @@ const MenuProps = {
   PaperProps: {
     style: {
       maxHeight: 200,
-      minHeight: 10,
     },
   },
 };
-
-
 
 type CustomSelectProps = {
   setMilkTypes: (newType: string[]) => void;
@@ -38,22 +35,25 @@ export default function CustomSelect({setMilkTypes}: CustomSelectProps) {
 
   return (
     <section className='customSelect'>
-      <FormControl className='customSelect__FormControl' sx={{ m: 0, width: {
-        xs: 80,   //0-599
-        sm: 200,  //600-899
-        md: 300,  //900-1199
-        lg: 400,  //1200+
-        }, height: {
-          xs: 50, 
-          sm: 50,
-          md: 50,
-          lg: 50,
-        }
-      
-      }}
+      <FormControl className='customSelect__FormControl' 
+        sx={{ m: 0, 
+          width: {
+          xs: 110,   //0-599
+          sm: 200,  //600-899
+          md: 300,  //900-1199
+          }, 
+          height: {
+            xs: 30, 
+            sm: 30,
+            md: 30,
+          },  
+          typography: {
+            fontSize: 8,
+          },
         
-        >
-        <InputLabel id="demo-multiple-checkbox-label">Milk Type</InputLabel>
+        }}
+      >
+      <InputLabel id="demo-multiple-checkbox-label">Milk Type</InputLabel>
         <Select
           labelId="demo-multiple-checkbox-label"
           id="demo-multiple-checkbox"
