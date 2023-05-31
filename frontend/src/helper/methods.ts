@@ -1,6 +1,8 @@
 
 import { addMilk } from "@/api/dataManagement";
 import { FileContent, IFileContent, IMilk, IMilkDto } from "./models"
+
+
 export const fillDb = async () => {
   const listOfMilìks: IMilk[] = FileContent.results;
   for (let i = 0; i < listOfMilìks.length; i++ ) {
@@ -12,6 +14,7 @@ export const fillDb = async () => {
     const addedMilk = await addMilk(milkDto);
   }
 }
+
 
 
   

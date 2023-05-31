@@ -26,3 +26,17 @@ export async function addMilk(milk: IMilkDto) {
   const json = (await response.json()) as { addedMilk: IMilk };
   return json;
 };
+
+export async function updateMilk(milk: IMilk) {
+  const id = milk.id
+  const puppyUrl = BASE_URL + `/${id}`;
+  const response = await fetch(puppyUrl, {
+    method: "PUT",
+    body: JSON.stringify(milk),
+    headers: {
+      "content-type": "application/json",
+    },  });
+  const json = (await response.json()) as { addedMilk: IMilkDto };
+  console.log("json: ", json);
+  return json;
+}; 

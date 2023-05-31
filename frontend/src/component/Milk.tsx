@@ -18,7 +18,7 @@ export default function Home({milk}: IMilktProps) {
           <h5 className="h--milk--info--name">{milk.name}</h5>
           <section className="h--milk_inner--info">
             <h6 className="h--milk--inner--info--type">{milk.type}</h6>
-            <h5 className="h--milk--inner--info--storage">{milk.storage} liter</h5>
+            <h6 className="h--milk--inner--info--storage">{milk.storage} liter</h6>
           </section>
         </section>
       </section>
