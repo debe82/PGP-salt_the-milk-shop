@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { IMilk } from '../utilities/models';
 import Milk from './Milk';
 import { getMilks } from '@/api/dataManagement';
-import { fillDb } from '@/utilities/methods';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 
 type MilkTypesProps = {
@@ -37,7 +37,7 @@ export default function MilksContainer({types, name}: MilkTypesProps) {
     <>
       <section className='section-products'>
         <h5>{allMilks.length} products </h5>
-        
+        <AddShoppingCartIcon/>
       </section>
       <section className='section__container--milk'>
         {

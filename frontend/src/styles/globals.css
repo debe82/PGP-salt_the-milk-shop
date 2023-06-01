@@ -30,7 +30,10 @@
 }
 
 .section-products {
+  display: flex;
   padding: 0px 30px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .section__container--milk {

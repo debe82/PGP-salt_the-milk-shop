@@ -11,15 +11,17 @@ export interface IMilk  {
   storage: number;
 }
 
+export interface IMilkToBuy  {
+    id: string;
+    name: string;
+    type: string;
+    quantity: number;
+  }
+
 export interface IMilkDto {
   name: string;
   type: string;
   storage: number;
-}
-
-export interface IFileContent {
-  count: number;
-  results: IMilk[];
 }
 
 export const milkTypeList = [
@@ -28,6 +30,11 @@ export const milkTypeList = [
     "Hemp", "Almond", "Oat", 
     "Macadamia", "Whole", "Walnut"
   ]
+
+export interface IFileContent {
+    count: number;
+    results: IMilk[];
+  }
 
 export const FileContent = {
     "count": 99,
