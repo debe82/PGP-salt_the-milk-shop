@@ -38,7 +38,7 @@ public class MilkController {
         return ResponseEntity.created(location).body(newMilk);
     }
 
-    @PutMapping("{id}") 
+    @PutMapping("{id}")
     ResponseEntity<Milk> updatePuppy(@PathVariable UUID id, @RequestBody MilkDTO milkDTO, HttpServletRequest req) {
         System.out.println("id: " + id);
         System.out.println("dto: " + milkDTO);
