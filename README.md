@@ -28,7 +28,7 @@ The Milk Shop Application allows the users to search, filter, select and order t
   ```
 ### Run the BackEnd:
 - Go to the backend folder root:
-  - <Path on disk>\the-milk-shop\backend>
+  - Path on disk\the-milk-shop\backend>
 - type "mvn spring-boot:run"
   - If there are no error, after a while the server will show
   ```
@@ -41,7 +41,7 @@ The Milk Shop Application allows the users to search, filter, select and order t
   
  ### Run the FrontEnd: 
  - Go to the frontend folder root:
-  - <Path on disk>\the-milk-shop\frontend>
+  - Path on disk\the-milk-shop\frontend>
 - install dependenice: "npm install"
 - type "npm run dev"
   - If there are no error, after a while the server will show
@@ -55,12 +55,16 @@ The Milk Shop Application allows the users to search, filter, select and order t
  ### Use the applicaion:
  - Go to http://localhost:3000/ to land on the main page:
   - The mobile version:
+   
     <img src="assets/mobile_version.png">
   - The tablet version:
+   
     <img src="assets/tablet_version.png">
   - The desktop version:
+   
     <img src="assets/desktop_version.png">
   - Milk details where user can order:
+   
     <img src="assets/milk_details.png">
   
 ## Technologies used 
