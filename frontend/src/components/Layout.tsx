@@ -1,8 +1,14 @@
+import Head from "next/head"
 
 
 export const Layout = ({children}: any) => {
   return (
       <>
+        <Head>
+          <title>The Milk Store</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+
         <header className="home-header">
           THE MILK STORE
         </header>

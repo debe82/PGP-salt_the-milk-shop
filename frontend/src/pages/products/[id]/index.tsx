@@ -1,5 +1,5 @@
 import { getMilk, updateMilk } from '@/api/dataManagement';
-import { IMilk } from '@/helper/models';
+import { IMilk } from '@/utilities/models';
 import {useRouter} from 'next/router'
 import { useEffect, useState } from 'react'
 import Head from 'next/head'

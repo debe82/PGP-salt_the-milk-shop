@@ -1,10 +1,10 @@
 "use client"
 
 import { useEffect, useState } from 'react';
-import { IMilk } from '../helper/models';
+import { IMilk } from '../utilities/models';
 import Milk from './Milk';
 import { getMilks } from '@/api/dataManagement';
-import { fillDb } from '@/helper/methods';
+import { fillDb } from '@/utilities/methods';
 
 
 type MilkTypesProps = {
@@ -37,6 +37,7 @@ export default function MilksContainer({types, name}: MilkTypesProps) {
     <>
       <section className='section-products'>
         <h5>{allMilks.length} products </h5>
+        
       </section>
       <section className='section__container--milk'>
         {

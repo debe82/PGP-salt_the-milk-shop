@@ -1,4 +1,4 @@
-import { milkTypeList } from "@/helper/models";
+import { milkTypeList } from "@/utilities/models";
 import CustomSelect from "./CustomSelect";
 import { useState } from "react";
 import { SelectChangeEvent } from "@mui/material";

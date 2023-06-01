@@ -7,7 +7,7 @@ import FormControl from '@mui/material/FormControl';
 import ListItemText from '@mui/material/ListItemText';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
-import { milkTypeList } from '@/helper/models';
+import { milkTypeList } from '@/utilities/models';
 
 const MenuProps = {
   PaperProps: {

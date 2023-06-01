@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import MilksContainer from '@/component/MilksContainer'
-import SearchFilter from '@/component/SearchFilter'
+
+import MilksContainer from '@/components/MilksContainer'
+import SearchFilter from '@/components/SearchFilter'
 import {useEffect, useState } from 'react'
 
 export default function Home() {
@@ -15,10 +15,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>The Milk Store</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
 
       <main className="home-main">
         <SearchFilter 

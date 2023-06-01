@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { IMilk } from "../helper/models"
+import { IMilk } from "../utilities/models"
 
 interface IMilktProps  {
   milk: IMilk
