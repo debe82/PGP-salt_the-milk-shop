@@ -61,7 +61,7 @@ The Milk Shop Application allows the users to search, filter, select and order t
   - The desktop version:
     <img src="assets/desktop_version.png">
   - Milk details where user can order:
-    <img src="assets/MilkDetails.png">
+    <img src="assets/milk_details.png">
   
 ## Technologies used 
 ### languages
