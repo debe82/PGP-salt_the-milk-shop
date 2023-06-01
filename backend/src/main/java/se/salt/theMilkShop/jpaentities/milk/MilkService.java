@@ -54,23 +54,4 @@ public class MilkService {
     }
 
 
-
-    public List<Milk> fillDataBaseFromJSonFile() {
-        System.out.println("hej");
-        Resource resource = new ClassPathResource("classpath:milk.json");
-        System.out.println("resource: " +resource);
-        try {
-            File file = resource.getFile();
-            String content = new String(Files.readAllBytes(file.toPath()));
-            System.out.println("content: " + content);
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-        //MilkListFileDTO milksFromFile = mapper.readValue("milk.json", MilkListFileDTO.class);
-        //System.out.println("milksFromFile: " + milksFromFile);
-
-        //List<Milk> allMilks = milkService.getAllMilks(); //.saveAllMilks(milks)
-        return null;
-    }
-
 }

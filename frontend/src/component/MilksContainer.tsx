@@ -29,7 +29,6 @@ export default function MilksContainer({types, name}: MilkTypesProps) {
   }
 
   useEffect(() => {
-    //fillDb();
     fetchData();
     updateTypes()
   }, [listOfTypes]);
