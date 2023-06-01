@@ -19,7 +19,12 @@ The Milk Shop Application allows the users to search, filter, select and order t
 - Verify Maven is installed correcly:
   - Open a terminal and type "mvn --v" (or mvn -version)
   
-<img src="assets/maven.png">
+    PS E:\Programming\Salt\PGP\the-milk-shop> mvn --v
+    Apache Maven 3.9.2 (c9616018c7a021c1c39be70fb2843d6f5f9b8a1c)
+    Maven home: E:\Programming\Java\apache-maven-3.9.2
+    Java version: 18.0.2, vendor: Amazon.com Inc., runtime: C:\Program Files\Amazon Corretto\jdk18.0.2_9
+    Default locale: en_US, platform encoding: UTF-8
+    OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
 
 <img src="">
 
