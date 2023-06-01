@@ -6,7 +6,6 @@ The Milk Shop Application allows the users to search, filter, select and order t
 - [User Experience (UX)](#user-experience--ux-)
 - [Technologies used](#technologies-used)
 - [Features](#features)
-- [Testing](#testing)
 - [Development](#development)
 - [Credits](#credits)
 
@@ -61,7 +60,8 @@ The Milk Shop Application allows the users to search, filter, select and order t
     <img src="assets/tablet_version.png">
   - The desktop version:
     <img src="assets/desktop_version.png">
-  -
+  - Milk details where user can order:
+    <img src="assets/MilkDetails.png">
   
 ## Technologies used 
 ### languages
@@ -86,8 +86,6 @@ The Milk Shop Application allows the users to search, filter, select and order t
   - Implementig a cart in order to order more products at once
   - Deploy the application
   - Improve the the style
-
-## Flow
 
 ## Credits
 - On the website of the  [w3schools](https://www.w3schools.com/)
