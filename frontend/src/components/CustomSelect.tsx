@@ -47,9 +47,6 @@ export default function CustomSelect({setMilkTypes}: CustomSelectProps) {
             sm: 30,
             md: 30,
           },  
-          typography: {
-            fontSize: 8,
-          },
         
         }}
       >

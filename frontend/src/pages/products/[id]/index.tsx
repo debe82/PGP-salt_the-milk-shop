@@ -70,6 +70,7 @@ const MilkDetails = () => {
         <Link className="link--toHome" href={`../`}>
           <button className='button--toHome'> Back </button>
         </Link>
+        <div></div>
         </section>
 
         <section className='section--prodDetails'>
