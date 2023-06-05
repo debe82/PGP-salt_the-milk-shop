@@ -58,12 +58,16 @@ The Milk Shop Application allows the users to search, filter, select and order t
  ### Use the applicaion:
  - Go to http://localhost:3000/ to land on the main page:
   - The mobile version:
+  
     <img src="assets/mobile_version.png">
   - The tablet version:
+  
     <img src="assets/tablet_version.png">
   - The desktop version:
+  
     <img src="assets/desktop_version.png">
   - Milk details where user can order:
+  
     <img src="assets/milk_details.png">
   
 ## Technologies used 
